@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/**
+æ•°æ®æºé“¾æ¥
+*/
 public class DBConn {
 	public static Connection getConnnection() {
 		  Connection conn = null;
@@ -20,20 +22,20 @@ public class DBConn {
 		String sql = null;
 		try {
 	
-			Class.forName("com.mysql.jdbc.Driver"); //¼ÓÔØmysqÇı¶¯
+			Class.forName("com.mysql.jdbc.Driver"); //åŠ è½½mysqé©±åŠ¨
 			  } catch (ClassNotFoundException e) {
-			   System.out.println("Çı¶¯¼ÓÔØ´íÎó");
-			   e.printStackTrace();//´òÓ¡³ö´íÏêÏ¸ĞÅÏ¢
+			   System.out.println("é©±åŠ¨åŠ è½½é”™è¯¯");
+			   e.printStackTrace();//æ‰“å°å‡ºé”™è¯¦ç»†ä¿¡æ¯
 			  }
 			  try {
 			   url = 
-			    "jdbc:mysql://192.168.3.110/bank?user=bank&password=admin&useUnicode=true&&characterEncoding=gb2312&autoReconnect=true&relaxAutoCommit=true&zeroDateTimeBehavior=convertToNull";//¼òµ¥Ğ´·¨£ºurl = "jdbc:myqsl://localhost/test(Êı¾İ¿âÃû)? user=root(ÓÃ»§)&password=yqs2602555(ÃÜÂë)";
+			    "jdbc:mysql://192.168.3.110/bank?user=bank&password=admin&useUnicode=true&&characterEncoding=gb2312&autoReconnect=true&relaxAutoCommit=true&zeroDateTimeBehavior=convertToNull";//ç®€å•å†™æ³•ï¼šurl = "jdbc:myqsl://localhost/test(æ•°æ®åº“å)? user=root(ç”¨æˆ·)&password=yqs2602555(å¯†ç )";
 			   user = "bank";
 			   password = "admin";
 			   conn = DriverManager.getConnection(url,user,password);
-			   //System.out.println("Êı¾İ¿âÒÑÁ¬½Ó£¡£¡£¡");
+			   //System.out.println("æ•°æ®åº“å·²è¿æ¥ï¼ï¼ï¼");
 			  } catch (SQLException e) {
-			   System.out.println("Êı¾İ¿âÁ´½Ó´íÎó");
+			   System.out.println("æ•°æ®åº“é“¾æ¥é”™è¯¯");
 			   e.printStackTrace();
 			  }
 		
